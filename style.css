@@ -1,0 +1,176 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  text-align: center;
+  margin-bottom: 1rem;
+  margin-top: 0;
+}
+
+p {
+  font-weight: 500;
+  margin: 0;
+}
+
+label {
+  font-weight: 600;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.ellipsis {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.ellipsis-3 {
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  line-height: 1.3rem;
+  max-height: 3.9rem;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1024px;
+  width: 100%;
+  padding: 0 8px;
+  padding-top: calc(1rem + env(safe-area-inset-top));
+  padding-top: calc(1rem + constant(safe-area-inset-top));
+  padding-bottom: calc(1rem + env(safe-area-inset-bottom));
+  padding-bottom: calc(1rem + constant(safe-area-inset-bottom));
+}
+
+.card {
+  background: #fff;
+  border-radius: 15px;
+  padding: 1rem;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(1, 1, 1, 0.368627451);
+}
+
+.btn {
+  padding: 0.5rem 1rem;
+  background: #162149;
+  color: #fff;
+  border-radius: 5px;
+  text-align: center;
+  white-space: nowrap;
+}
+.btn.btn-lined {
+  color: #162149;
+  background: #fff;
+  border: 1px solid #162149;
+}
+
+#Tabling {
+  min-height: 100vh;
+  background: #CED8E4;
+}
+@media (max-width: 1023px) {
+  #Tabling {
+    font-size: 14px;
+  }
+  #Tabling .detail {
+    display: none;
+  }
+}
+@media (min-width: 1024px) {
+  #Tabling .content-grid .list {
+    overflow-y: scroll;
+    height: calc(100vh - 100px);
+    margin-right: 1rem;
+  }
+}
+#Tabling .content-grid {
+  display: flex;
+}
+#Tabling .content-grid .list {
+  display: flex;
+  flex-flow: column;
+  flex: 1;
+  overflow: hidden;
+}
+#Tabling .content-grid .detail {
+  flex-basis: 35%;
+}
+#Tabling .detail-mobile {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  height: 80%;
+  transform: translateY(80%);
+  opacity: 0;
+  transition: opacity 0.3s, transform 0.5s;
+}
+#Tabling .detail-mobile.active {
+  transform: translateY(0);
+  opacity: 1;
+}
+#Tabling .detail-mobile .header {
+  position: relative;
+}
+#Tabling .detail-mobile .header button {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+#Tabling .list-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+#Tabling .list-item label {
+  flex: 1.5;
+  text-align: center;
+}
+#Tabling .list-item .content {
+  flex: 7;
+  overflow: hidden;
+  line-height: 1.5;
+}
+#Tabling .list-item .btn-wrapper {
+  flex: 1.5;
+  text-align: center;
+}
+#Tabling .table-item {
+  display: flex;
+}
+#Tabling .table-item label {
+  width: 100px;
+  flex-shrink: 0;
+  color: lightgray;
+}
+#Tabling .table-item:last-of-type {
+  margin-top: 3rem;
+}
+
+/*# sourceMappingURL=style.css.map */

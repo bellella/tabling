@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tabling Test</title>
+  <link href="./style.css" rel="stylesheet" />
+</head>
+
+<body>
+  <div id="Tabling">
+    <div class="container">
+      <h1>예약 목록</h1>
+      <div class="content-grid">
+        <div id="ReservationList" class="list">
+        </div>
+        <div class="detail">
+          <div id="ReservationDetail" class="card">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="ReservationDetailMobile" class="detail-mobile card">
+    </div>
+  </div>
+</body>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    if (isIE()) {
+      addScript('https://polyfill.io/v3/polyfill.min.js?features=String.prototype.sup%2CArray.prototype.find%2CArray.prototype.map%2Cfetch%2CPromise%2CString.prototype.padStart%2CElement.prototype.append%2CElement.prototype.classList%2CElement.prototype.remove%2CElement.prototype.prepend');
+      addScript('https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/7.0.0/polyfill.min.js');
+      addScript('pollyfill-index.js');
+    } else {
+      addScript('index.js')
+    }
+  });
+  function isIE() {
+    var ua = window.navigator.userAgent;
+    var msie = ua.indexOf('MSIE ');
+    var trident = ua.indexOf('Trident/');
+
+    return (msie > -1 || trident > -1);
+  }
+  function addScript(src) {
+    var script = document.createElement('script');
+    script.src = src;
+    document.head.appendChild(script);
+  }
+
+</script>
+
+</html>

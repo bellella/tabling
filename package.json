@@ -1,0 +1,24 @@
+{
+  "name": "tabling",
+  "version": "1.0.0",
+  "description": "테이블링 과제입니다.",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run babel & npm run sass",
+    "dev": "babel index.js --out-file pollyfill-index.js --watch && sass --watch style.scss style.css",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass style.scss style.css",
+    "babel": "babel index.js --out-file pollyfill-index.js"
+  },
+  "author": "Mina Choi",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.63.3"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.22.5",
+    "@babel/core": "^7.22.5",
+    "@babel/preset-env": "^7.22.5",
+    "babel-core": "^6.26.3"
+  }
+}
